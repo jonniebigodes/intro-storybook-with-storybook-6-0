@@ -77,7 +77,7 @@ export default function Task({
   onPinTask,
 }) {
   return (
-    <div className={`list-item ${state}`} style={backgroundColor && { backgroundColor }}>
+    <div className={`list-item ${state}`} >
       <label className="checkbox">
         <input
           type="checkbox"
@@ -93,6 +93,7 @@ export default function Task({
           value={title}
           readOnly={true}
           placeholder="Input title"
+          style={backgroundColor && { backgroundColor }}
         />
       </div>
 
