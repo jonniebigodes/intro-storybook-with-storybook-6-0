@@ -18,9 +18,21 @@ export default {
   // Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
   title: "Task",
-  argTypes: {
-    ...actionsData
+  parameters: {
+    assets: [
+     /*  'path/to/your/asset.png',
+      'path/to/another/asset.png',
+      'path/to/yet/another/asset.png', */
+      "./image_1.jpg",
+      "./image_2.jpg",
+      "./image_3.jpg"
+    ],
   },
+  argTypes: {
+    ...actionsData,
+    backgroundColor: { control: 'color' },
+  },
+  
 };
 
 const Template = (args) => <Task {...args} />;
@@ -28,6 +40,7 @@ const Template = (args) => <Task {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   task: taskData,
+  //backgroundColor: '#e5f9f7',
 };
 
 export const Pinned = Template.bind({});
@@ -36,6 +49,7 @@ Pinned.args = {
     ...taskData,
     state: "TASK_PINNED",
   },
+  //backgroundColor: '#c0eef0',
 };
 
 export const Archived = Template.bind({});
@@ -44,4 +58,5 @@ Archived.args = {
     ...taskData,
     state: "TASK_ARCHIVED",
   },
+  //backgroundColor: '#d7f5f5',
 };
