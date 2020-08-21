@@ -2,10 +2,10 @@ import React from "react";
 
 import Task from "./Task";
 
-export const actionsData = {
+/* export const actionsData = {
   onPinTask: { action: "onPinTask" },
   onArchiveTask: { action: "onArchiveTask" },
-};
+}; */
 
 export const taskData = {
   id: "1",
@@ -29,7 +29,7 @@ export default {
     ],
   },
   argTypes: {
-    ...actionsData,
+    /* ...actionsData, */
     backgroundColor: { control: 'color' },
   },
   
@@ -39,14 +39,19 @@ const Template = (args) => <Task {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  task: taskData,
+  task:{
+    id: "1",
+    title: "Test Task",
+    state: "TASK_INBOX",
+    updatedAt: new Date(2018, 0, 1, 9, 0),
+  }
   //backgroundColor: '#e5f9f7',
 };
 
 export const Pinned = Template.bind({});
 Pinned.args = {
   task: {
-    ...taskData,
+    ...Default.args.task,
     state: "TASK_PINNED",
   },
   //backgroundColor: '#c0eef0',
@@ -55,7 +60,7 @@ Pinned.args = {
 export const Archived = Template.bind({});
 Archived.args = {
   task: {
-    ...taskData,
+   ...Default.args.task,
     state: "TASK_ARCHIVED",
   },
   //backgroundColor: '#d7f5f5',

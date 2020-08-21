@@ -2,13 +2,15 @@ import React from "react";
 import { Provider } from "react-redux";
 import { action } from "@storybook/addon-actions";
 import { PureInboxScreen } from "./InboxScreen";
-import { defaultTasksData } from "./TaskList.stories";
+import * as TaskListStories from './TaskList.stories'
+/* import { defaultTasksData } from "./TaskList.stories"; */
 
 // A super-simple mock of a redux store
 const store = {
   getState: () => {
     return {
-      tasks: defaultTasksData,
+      //tasks: defaultTasksData,
+      tasks:TaskListStories.Default.args.tasks,
     };
   },
   subscribe: () => 0,

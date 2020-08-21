@@ -105,7 +105,6 @@ export function PureTaskList({ loading, tasks, onPinTask, onArchiveTask }) {
     onPinTask,
     onArchiveTask,
   };
-
   const LoadingRow = (
     <div className="loading-item">
       <span className="glow-checkbox" />
