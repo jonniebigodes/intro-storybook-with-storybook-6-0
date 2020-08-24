@@ -28,9 +28,9 @@ export default {
       "./image_3.jpg",
     ],
   },
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
+  // argTypes: {
+  //   backgroundColor: { control: "color" },
+  // },
 };
 
 const Template = (args) => <Task {...args} />;

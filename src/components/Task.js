@@ -72,7 +72,7 @@ export default function Task({
 //using addons update
 export default function Task({
   task: { id, title, state },
-  backgroundColor,
+  // backgroundColor,
   onArchiveTask,
   onPinTask,
 }) {
@@ -93,7 +93,8 @@ export default function Task({
           value={title}
           readOnly={true}
           placeholder="Input title"
-          style={backgroundColor && { backgroundColor }}
+          //style={backgroundColor && { backgroundColor }}
+          style={{ textOverflow: 'ellipsis', background: 'red' }}
         />
       </div>
 
