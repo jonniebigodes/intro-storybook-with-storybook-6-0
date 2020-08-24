@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 // simple component initial setup
-
-/* export default function Task({
+/* 
+export default function Task({
   task: { id, title, state },
   onArchiveTask,
   onPinTask,
@@ -69,7 +69,7 @@ import PropTypes from "prop-types";
 // };
 
 
-// using addons update
+//using addons update
 export default function Task({
   task: { id, title, state },
   backgroundColor,

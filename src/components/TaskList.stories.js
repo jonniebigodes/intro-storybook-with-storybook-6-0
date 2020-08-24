@@ -33,7 +33,7 @@ export default {
   //updates for the data section (initial redux) 
   //component: TaskList,
   component:PureTaskList,
-  title: "PureTaskList",
+  title: "TaskList",
   decorators: [(story) => <div style={{ padding: "3rem" }}>{story()}</div>],
   // Our exports that end in "Data" are not stories.
   // excludeStories: /.*Data$/,

@@ -29,7 +29,6 @@ export default {
     ],
   },
   argTypes: {
-    /* ...actionsData, */
     backgroundColor: { control: "color" },
   },
 };
