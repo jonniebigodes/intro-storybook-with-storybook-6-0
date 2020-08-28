@@ -72,7 +72,6 @@ export default function Task({
 //using addons update
 export default function Task({
   task: { id, title, state },
-  backgroundColor,
   onArchiveTask,
   onPinTask,
 }) {
@@ -93,7 +92,7 @@ export default function Task({
           value={title}
           readOnly={true}
           placeholder="Input title"
-          style={backgroundColor && { backgroundColor }}
+          style={{ textOverflow: 'ellipsis' }}
         />
       </div>
 
@@ -119,10 +118,9 @@ Task.propTypes = {
     state: PropTypes.string.isRequired,
     /** Background color for each state */
   }),
-  /** Background color for the task */
-  backgroundColor:PropTypes.string,
   /** Event to change the task to archived */
   onArchiveTask: PropTypes.func,
   /** Event to change the task to pinned */
   onPinTask: PropTypes.func,
+  /**  Configures the styles for the input */
 };
